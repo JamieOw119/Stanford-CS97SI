@@ -86,10 +86,11 @@ int main() {
     int n, a, b;
     scanf("%d%*c", &n);
     while(n--) {
-        gets(str);
-        sscanf(strrev(str), "%d%d", &a, &b);
+        // avoid VSCode error notice
+        // gets(str);
+        // sscanf(strrev(str), "%d%d", &a, &b);
         sprintf(str, "%d", a + b);
-        sscanf(strrev(str), "%d", &a);
+        // sscanf(strrev(str), "%d", &a);
         printf("%d\n", a);
     }
     return 0;
